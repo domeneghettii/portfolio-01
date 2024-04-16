@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&display=swap');
+
+.sedan-regular {
+    font-family: "Sedan", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
 * {
     margin: 0;
     padding: 0;
@@ -9,10 +17,10 @@
 }
 
 :root {
-    --bg-color: #080808;
-    --secondary-bg-color: #121212
+    --bg-color: #718cc2;
+    --secondary-bg-color: #2e0985; 
     --text-color: #e4e4e4;
-    --main-color: #aa00ff;
+    --main-color: #e3b6b68b;
 
 }
 html {
@@ -22,4 +30,50 @@ html {
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 2rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between; /* Alinha os elementos um ao lado do outro no eixo horizontal */
+    align-items: center; /* Alinha os elementos no centro no eixo vertical */
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 2rem;
+    color: var(--text-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.03);
+}
+
+.logo span {
+    text-shadow: 0 0 5px var(--main-color);
+}
+
+.navbar a {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3xp solid transparent;
+    border-radius: 3xp;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+    border-bottom: 3xp solid var(--main-color);
 }
